@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#2563eb" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="termBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0284c7" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Background -->
+  <circle cx="300" cy="240" r="180" fill="url(#bgGlow)" filter="url(#glowFilter)"/>
+  <circle cx="480" cy="120" r="80" fill="#38bdf8" fill-opacity="0.12" filter="url(#glowFilter)"/>
+
+  <!-- Geometric Grid Accent Lines -->
+  <g stroke="#334155" stroke-width="0.75" opacity="0.4" stroke-dasharray="4,4">
+    <line x1="40" y1="100" x2="560" y2="100" />
+    <line x1="40" y1="250" x2="560" y2="250" />
+    <line x1="40" y1="400" x2="560" y2="400" />
+    <line x1="120" y1="40" x2="120" y2="460" />
+    <line x1="300" y1="40" x2="300" y2="460" />
+    <line x1="480" y1="40" x2="480" y2="460" />
+  </g>
+
+  <!-- Main IDE / Terminal Window -->
+  <g filter="url(#softShadow)">
+    <!-- Terminal Outer Frame -->
+    <rect x="70" y="70" width="460" height="320" rx="16" fill="url(#cardGrad)" stroke="url(#termBorder)" stroke-width="1.5"/>
+    
+    <!-- Window Header -->
+    <rect x="70" y="70" width="460" height="42" rx="16" fill="#131c31"/>
+    <!-- Window Title Bar Fix bottom corners -->
+    <rect x="70" y="96" width="460" height="16" fill="#131c31"/>
+    <line x1="70" y1="112" x2="530" y2="112" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- Window Controls -->
+    <circle cx="95" cy="91" r="5.5" fill="#f43f5e"/>
+    <circle cx="115" cy="91" r="5.5" fill="#fbbf24"/>
+    <circle cx="135" cy="91" r="5.5" fill="#10b981"/>
+    
+    <!-- Tab -->
+    <rect x="160" y="78" width="150" height="26" rx="6" fill="#1e293b"/>
+    <text x="180" y="95" font-family="'JetBrains Mono', monospace, Consolas" font-size="11.5" fill="#93c5fd" font-weight="500">MetsnanatDev.ts</text>
+    <circle cx="295" cy="91" r="3" fill="#38bdf8"/>
+
+    <!-- Breadcrumb -->
+    <text x="96" y="132" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b">src &gt; portfolio &gt; developer.ts</text>
+
+    <!-- Code Content Lines -->
+    <!-- Line numbers -->
+    <g font-family="'JetBrains Mono', monospace" font-size="11" fill="#475569" text-anchor="end">
+      <text x="110" y="160">1</text>
+      <text x="110" y="182">2</text>
+      <text x="110" y="204">3</text>
+      <text x="110" y="226">4</text>
+      <text x="110" y="248">5</text>
+      <text x="110" y="270">6</text>
+      <text x="110" y="292">7</text>
+      <text x="110" y="314">8</text>
+      <text x="110" y="336">9</text>
+      <text x="110" y="358">10</text>
+    </g>
+
+    <!-- Code Syntax -->
+    <g font-family="'JetBrains Mono', monospace" font-size="11.5">
+      <text x="130" y="160">
+        <tspan fill="#f43f5e">const</tspan>
+        <tspan fill="#67e8f9"> developer</tspan>
+        <tspan fill="#94a3b8">: </tspan>
+        <tspan fill="#fbbf24">FullStackDeveloper</tspan>
+        <tspan fill="#94a3b8"> = {</tspan>
+      </text>
+      
+      <text x="150" y="182">
+        <tspan fill="#e2e8f0">name: </tspan>
+        <tspan fill="#a7f3d0">"Metsnanat Berhanu"</tspan>
+        <tspan fill="#94a3b8">,</tspan>
+      </text>
+
+      <text x="150" y="204">
+        <tspan fill="#e2e8f0">university: </tspan>
+        <tspan fill="#a7f3d0">"St. Mary's University"</tspan>
+        <tspan fill="#94a3b8">,</tspan>
+      </text>
+
+      <text x="150" y="226">
+        <tspan fill="#e2e8f0">year: </tspan>
+        <tspan fill="#fdba74">3</tspan>
+        <tspan fill="#94a3b8">, // Computer Science</tspan>
+      </text>
+
+      <text x="150" y="248">
+        <tspan fill="#e2e8f0">core: </tspan>
+        <tspan fill="#94a3b8">[</tspan>
+        <tspan fill="#a7f3d0">"React"</tspan>
+        <tspan fill="#94a3b8">, </tspan>
+        <tspan fill="#a7f3d0">"Node.js"</tspan>
+        <tspan fill="#94a3b8">, </tspan>
+        <tspan fill="#a7f3d0">"SQL"</tspan>
+        <tspan fill="#94a3b8">],</tspan>
+      </text>
+
+      <text x="150" y="270">
+        <tspan fill="#e2e8f0">passion: </tspan>
+        <tspan fill="#a7f3d0">"Building user-friendly apps"</tspan>
+        <tspan fill="#94a3b8">,</tspan>
+      </text>
+
+      <text x="150" y="292">
+        <tspan fill="#e2e8f0">status: </tspan>
+        <tspan fill="#38bdf8">"Open to Opportunities"</tspan>
+        <tspan fill="#94a3b8">,</tspan>
+      </text>
+
+      <text x="150" y="314">
+        <tspan fill="#67e8f9">solveProblem</tspan>
+        <tspan fill="#94a3b8">() { </tspan>
+        <tspan fill="#f43f5e">return</tspan>
+        <tspan fill="#e2e8f0"> this.innovate(); }</tspan>
+      </text>
+
+      <text x="130" y="336">
+        <tspan fill="#94a3b8">};</tspan>
+      </text>
+
+      <!-- Active Cursor -->
+      <line x1="130" y1="346" x2="130" y2="362" stroke="#38bdf8" stroke-width="2">
+        <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+      </line>
+    </g>
+  </g>
+
+  <!-- Floating Badge 1: React & Frontend -->
+  <g transform="translate(420, 280)" filter="url(#softShadow)">
+    <rect width="150" height="54" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2"/>
+    <circle cx="28" cy="27" r="16" fill="#0284c7" fill-opacity="0.2"/>
+    <!-- React atom icon -->
+    <ellipse cx="28" cy="27" rx="10" ry="4" fill="none" stroke="#38bdf8" stroke-width="1.5" transform="rotate(30 28 27)"/>
+    <ellipse cx="28" cy="27" rx="10" ry="4" fill="none" stroke="#38bdf8" stroke-width="1.5" transform="rotate(-30 28 27)"/>
+    <ellipse cx="28" cy="27" rx="10" ry="4" fill="none" stroke="#38bdf8" stroke-width="1.5" transform="rotate(90 28 27)"/>
+    <circle cx="28" cy="27" r="2.2" fill="#38bdf8"/>
+    <text x="54" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#f8fafc">Full-Stack</text>
+    <text x="54" y="39" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#94a3b8">Web Applications</text>
+  </g>
+
+  <!-- Floating Badge 2: St. Mary's CS -->
+  <g transform="translate(30, 290)" filter="url(#softShadow)">
+    <rect width="160" height="54" rx="12" fill="#0f172a" stroke="#3b82f6" stroke-width="1.2"/>
+    <circle cx="28" cy="27" r="16" fill="#2563eb" fill-opacity="0.2"/>
+    <!-- Graduation / CS Cap Icon -->
+    <path d="M28 20 L37 24 L28 28 L19 24 Z" fill="#60a5fa"/>
+    <path d="M21 26.5 V31 C21 33 28 35 28 35 C28 35 35 33 35 31 V26.5" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+    <line x1="36" y1="24.5" x2="36" y2="31" stroke="#38bdf8" stroke-width="1.2"/>
+    <circle cx="36" cy="31" r="1.5" fill="#38bdf8"/>
+    <text x="54" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#f8fafc">St. Mary's Univ.</text>
+    <text x="54" y="39" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#94a3b8">3rd Year CS Student</text>
+  </g>
+
+  <!-- Floating Badge 3: Clean UI / UX -->
+  <g transform="translate(360, 395)" filter="url(#softShadow)">
+    <rect width="170" height="52" rx="12" fill="#0f172a" stroke="#818cf8" stroke-width="1.2"/>
+    <circle cx="28" cy="26" r="15" fill="#4f46e5" fill-opacity="0.2"/>
+    <!-- Palette / Design icon -->
+    <path d="M28 17 C22 17 18 21 18 26 C18 30 21 33 25 33 C26 33 27 32 27 31 C27 30.5 26.8 30 26.8 29.5 C26.8 28.5 27.5 27.8 28.5 27.8 H31 C34 27.8 36.5 25.3 36.5 22.2 C36.5 19.3 32.7 17 28 17 Z" fill="none" stroke="#818cf8" stroke-width="1.5"/>
+    <circle cx="23" cy="22" r="1.5" fill="#38bdf8"/>
+    <circle cx="28" cy="20" r="1.5" fill="#f43f5e"/>
+    <circle cx="33" cy="22" r="1.5" fill="#fbbf24"/>
+    <text x="52" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#f8fafc">UI/UX Design</text>
+    <text x="52" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#94a3b8">Interactive &amp; Modern</text>
+  </g>
+</svg>

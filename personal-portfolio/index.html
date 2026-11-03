@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metsnanat Berhanu | Full-Stack Web Developer &amp; CS Student</title>
+  
+  <!-- Meta tags for SEO & Previews -->
+  <meta name="description" content="Personal portfolio of Metsnanat Berhanu, a 3rd-year Computer Science student at St. Mary's University and Full-Stack Web Developer passionate about building responsive, interactive, and user-friendly web applications.">
+  <meta name="author" content="Metsnanat Berhanu">
+  <meta name="theme-color" content="#070b16">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Devicon CDN for authentic tech stack icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            navy: {
+              950: '#070b16',
+              900: '#0b1329',
+              850: '#0f172a',
+              800: '#17233f',
+              700: '#1e293b',
+              600: '#334155',
+            },
+            accent: {
+              blue: '#3b82f6',
+              cyan: '#38bdf8',
+              teal: '#06b6d4',
+              glow: '#0284c7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-navy-950 text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-white">
+
+  <!-- Ambient Glowing Background Orbs -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+
+  <!-- ========================================================================
+       HEADER / NAVIGATION BAR
+       ======================================================================== -->
+  <header id="main-navbar" class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand / Logo -->
+        <a href="#hero" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded-lg p-1" aria-label="Metsnanat Berhanu Home">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-sky-500 to-cyan-400 p-[1.5px] shadow-lg shadow-sky-500/20 group-hover:shadow-cyan-400/40 transition-all">
+            <div class="w-full h-full bg-navy-950 rounded-[10px] flex items-center justify-center">
+              <span class="font-mono font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 text-sm">&lt;MB/&gt;</span>
+            </div>
+          </div>
+          <div>
+            <span class="font-bold text-lg tracking-tight text-white dark:text-white group-hover:text-cyan-400 transition-colors">Metsnanat Berhanu</span>
+            <span class="hidden sm:block text-[11px] font-medium text-slate-400 tracking-wider uppercase">CS Student &bull; Developer</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2" aria-label="Main Navigation">
+          <a href="#about" class="nav-link px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors">About</a>
+          <a href="#skills" class="nav-link px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors">Skills</a>
+          <a href="#services" class="nav-link px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors">What I Do</a>
+          <a href="#projects" class="nav-link px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors">Projects</a>
+          <a href="#certifications" class="nav-link px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors">Certifications</a>
+          <a href="#contact" class="nav-link px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Side: Theme Toggle & CTA -->
+        <div class="flex items-center gap-3">
+          <!-- Theme Toggle Button -->
+          <button class="theme-toggle-btn w-10 h-10 rounded-xl bg-navy-800/80 hover:bg-navy-700/80 border border-slate-700/60 flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400" aria-label="Toggle dark/light theme" title="Toggle Theme">
+            <i class="fa-solid fa-sun text-amber-400 text-lg transition-transform duration-300 hover:rotate-45"></i>
+          </button>
+
+          <!-- Desktop Contact CTA -->
+          <a href="#contact" class="hidden lg:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 rounded-lg shadow-md shadow-blue-500/20 hover:shadow-sky-400/30 transition-all">
+            <span>Let's Connect</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button id="hamburger-btn" class="hamburger md:hidden w-10 h-10 rounded-xl bg-navy-800/80 border border-slate-700/60 flex flex-col items-center justify-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-cyan-400" aria-label="Open navigation menu" aria-expanded="false">
+            <span class="hamburger-line line-1 w-5 h-0.5 bg-slate-300 rounded-full"></span>
+            <span class="hamburger-line line-2 w-5 h-0.5 bg-slate-300 rounded-full"></span>
+            <span class="hamburger-line line-3 w-5 h-0.5 bg-slate-300 rounded-full"></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Menu -->
+    <div id="mobile-menu" class="md:hidden border-b border-slate-800/80 bg-navy-950/95 backdrop-blur-xl">
+      <div class="px-4 pt-3 pb-6 space-y-1">
+        <a href="#about" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800/70 hover:text-cyan-400 transition-colors">
+          <i class="fa-regular fa-user text-sky-400 w-5"></i>
+          <span>About Me</span>
+        </a>
+        <a href="#skills" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800/70 hover:text-cyan-400 transition-colors">
+          <i class="fa-solid fa-code text-sky-400 w-5"></i>
+          <span>Skills &amp; Technologies</span>
+        </a>
+        <a href="#services" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800/70 hover:text-cyan-400 transition-colors">
+          <i class="fa-solid fa-laptop-code text-sky-400 w-5"></i>
+          <span>What I Do</span>
+        </a>
+        <a href="#projects" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800/70 hover:text-cyan-400 transition-colors">
+          <i class="fa-solid fa-folder-open text-sky-400 w-5"></i>
+          <span>Projects</span>
+        </a>
+        <a href="#certifications" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800/70 hover:text-cyan-400 transition-colors">
+          <i class="fa-solid fa-certificate text-sky-400 w-5"></i>
+          <span>Certifications</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-navy-800/70 hover:text-cyan-400 transition-colors">
+          <i class="fa-regular fa-paper-plane text-sky-400 w-5"></i>
+          <span>Contact</span>
+        </a>
+
+        <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <a href="https://linkedin.com/in/metsnib" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-blue-600 transition-colors" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/metsnib" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700 transition-colors" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:metsnib@gmail.com" class="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-sky-600 transition-colors" aria-label="Email Metsnanat">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+          </div>
+          <span class="text-xs text-slate-400">St. Mary's University CS</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-24">
+    <!-- ========================================================================
+         1. HERO SECTION
+         ======================================================================== -->
+    <section id="hero" class="min-h-[calc(100vh-6rem)] flex items-center relative py-12 lg:py-20 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Hero Text Content -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            <!-- Status Badge -->
+            <div class="hero-anim-badge inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-navy-850 border border-cyan-500/30 shadow-inner shadow-cyan-500/10">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="text-xs font-semibold tracking-wide text-cyan-300">Open to Internship &amp; Developer Roles</span>
+            </div>
+
+            <!-- Name with Entrance Animation -->
+            <h1 class="hero-anim-name text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              Hi, I'm <br class="hidden sm:block"/>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 drop-shadow-sm">Metsnanat Berhanu</span>
+            </h1>
+
+            <!-- Professional Title -->
+            <div class="hero-anim-title">
+              <p class="text-base sm:text-lg lg:text-xl font-semibold text-sky-200/90 tracking-wide font-mono">
+                Full-Stack Web Developer <span class="text-cyan-400">|</span> 3rd-Year Computer Science Student <span class="text-cyan-400">|</span> UI/UX Designer
+              </p>
+            </div>
+
+            <!-- Description -->
+            <p class="hero-anim-desc text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              I am a 3rd-year Computer Science student at St. Mary's University with a passion for building responsive, interactive, and user-friendly web applications. I enjoy solving problems through code and developing practical projects using modern web technologies. I am continuously expanding my skills in software development, databases, and emerging technologies.
+            </p>
+
+            <!-- Buttons: Smooth navigation to #projects & #contact -->
+            <div class="hero-anim-buttons flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <a href="#projects" class="btn-primary">
+                <i class="fa-solid fa-layer-group text-sm"></i>
+                <span>View My Projects</span>
+              </a>
+              <a href="#contact" class="btn-outline">
+                <i class="fa-regular fa-paper-plane text-sm"></i>
+                <span>Contact Me</span>
+              </a>
+            </div>
+
+            <!-- Quick Social / Contact Links -->
+            <div class="hero-anim-social flex items-center justify-center lg:justify-start gap-4 pt-3 text-slate-400">
+              <span class="text-xs font-medium uppercase tracking-wider text-slate-500">Connect:</span>
+              <a href="https://linkedin.com/in/metsnib" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 hover:scale-110 transition-all" aria-label="LinkedIn Profile" title="LinkedIn">
+                <i class="fa-brands fa-linkedin text-xl"></i>
+              </a>
+              <a href="https://github.com/metsnib" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 hover:scale-110 transition-all" aria-label="GitHub Profile" title="GitHub">
+                <i class="fa-brands fa-github text-xl"></i>
+              </a>
+              <a href="mailto:metsnib@gmail.com" class="hover:text-cyan-400 hover:scale-110 transition-all" aria-label="Send Email" title="Email metsnib@gmail.com">
+                <i class="fa-solid fa-envelope text-xl"></i>
+              </a>
+              <button type="button" class="copy-email-btn text-xs px-2.5 py-1 rounded bg-navy-850 hover:bg-navy-800 text-sky-300 border border-slate-700/70 hover:border-sky-400/50 transition-all" title="Copy email address">
+                <i class="fa-regular fa-copy mr-1"></i>Copy Email
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Hero Visual Element (Developer Code Window & Interactive Graphic) -->
+          <div class="lg:col-span-5 flex justify-center hero-anim-visual">
+            <div class="relative w-full max-w-lg lg:max-w-none">
+              <!-- Glow backplate -->
+              <div class="absolute -inset-2 bg-gradient-to-r from-sky-500/20 to-blue-600/20 rounded-3xl blur-2xl opacity-75"></div>
+              
+              <!-- Floating Graphic Illustration -->
+              <div class="relative floating-graphic drop-shadow-2xl">
+                <img src="assets/images/developer-hero.svg" alt="Metsnanat Berhanu - Full-Stack Developer Illustration" class="w-full h-auto rounded-2xl" width="600" height="500" loading="eager">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         2. ABOUT ME SECTION
+         ======================================================================== -->
+    <section id="about" class="py-20 bg-navy-900/40 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i class="fa-regular fa-user"></i>
+            <span>Background &amp; Profile</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">About Me</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto rounded-full mt-3 mb-4"></div>
+          <p class="text-slate-400 text-base sm:text-lg">
+            Dedicated Computer Science student with a passionate commitment to software engineering, user-centric interfaces, and continuous growth.
+          </p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Narrative Bio -->
+          <div class="lg:col-span-6 space-y-5 reveal reveal-delay-1">
+            <h3 class="text-2xl font-bold text-white flex items-center gap-3">
+              <span>Building Practical Web Solutions</span>
+              <span class="text-sky-400 text-sm font-mono font-normal">Enjoy</span>
+            </h3>
+            
+            <p class="text-slate-300 leading-relaxed text-base">
+              I am a <strong class="text-white font-semibold">3rd-year Computer Science student at St. Mary's University</strong> with a strong foundation in computational principles, data structures, and web technologies. My core interest lies in <strong class="text-cyan-300 font-semibold">full-stack web development and software engineering</strong>.
+            </p>
+
+            <p class="text-slate-300 leading-relaxed text-base">
+              I am genuinely passionate about building practical, accessible, and user-friendly web applications that solve tangible problems. I embrace every project as an opportunity to write cleaner, more maintainable code and develop my analytical problem-solving skills.
+            </p>
+
+            <p class="text-slate-300 leading-relaxed text-base">
+              Beyond standard web development, I am continuously broadening my horizons by exploring <strong class="text-white font-semibold">cybersecurity, data science, artificial intelligence, and UI/UX design</strong>. I believe that understanding both back-end architecture and modern aesthetic interface design makes a well-rounded software engineer.
+            </p>
+
+            <!-- Quick Fact List -->
+            <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+              <div class="flex items-center gap-2.5 text-slate-300">
+                <i class="fa-solid fa-graduation-cap text-sky-400"></i>
+                <span>St. Mary's University</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-slate-300">
+                <i class="fa-solid fa-code-branch text-sky-400"></i>
+                <span>3rd-Year Computer Science</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-slate-300">
+                <i class="fa-solid fa-location-dot text-sky-400"></i>
+                <span>Addis Ababa, Ethiopia</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-slate-300">
+                <i class="fa-solid fa-briefcase text-sky-400"></i>
+                <span>Available for Internships</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Cards / Highlights -->
+          <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-5 reveal reveal-delay-2">
+            
+            <!-- Card 1 -->
+            <div class="portfolio-card p-6 border-l-4 border-l-sky-500">
+              <div class="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 text-xl mb-4">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">Academic Background</h4>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Pursuing a Bacheelor Computer Science curriculum at St. Mary's University, mastering algorithms, DBMS, and software design.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="portfolio-card p-6 border-l-4 border-l-blue-500">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl mb-4">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">Full-Stack Development</h4>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Building responsive web applications using Frontend and Backend technologies.
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="portfolio-card p-6 border-l-4 border-l-cyan-400">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl mb-4">
+                <i class="fa-solid fa-cubes-stacked"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">Practical Experience</h4>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Focused on deploying real, interactive applications with responsive layouts, CRUD operations, and live cloud hosting.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="portfolio-card p-6 border-l-4 border-l-indigo-500">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 text-xl mb-4">
+                <i class="fa-solid fa-compass"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">Additional Skills</h4>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Enriching development with cybersecurity foundations, exploratory data science, modern AI concepts, and Figma UI/UX prototyping.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. SKILLS & TECHNOLOGIES SECTION
+         ======================================================================== -->
+    <section id="skills" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-code"></i>
+            <span>Technical Capabilities</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Skills &amp; Technologies</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto rounded-full mt-3 mb-4"></div>
+          <p class="text-slate-400 text-base sm:text-lg">
+            A comprehensive overview of programming languages, frameworks, databases, and development tools I actively work with.
+          </p>
+        </div>
+
+        <div class="space-y-12">
+          
+          <!-- Category 1: Programming Languages & Web Development -->
+          <div class="reveal reveal-delay-1">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-8 h-8 rounded-lg bg-blue-600/20 flex items-center justify-center text-blue-400 text-sm">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Programming Languages &amp; Web Development</h3>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+              <!-- HTML5 -->
+              <div class="skill-card">
+                <i class="devicon-html5-plain colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">HTML5</span>
+                  <span class="block text-[11px] text-slate-400">Semantic &amp; Accessible</span>
+                </div>
+              </div>
+
+              <!-- CSS3 -->
+              <div class="skill-card">
+                <i class="devicon-css3-plain colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">CSS3</span>
+                  <span class="block text-[11px] text-slate-400">Flexbox &amp; Grid</span>
+                </div>
+              </div>
+
+              <!-- JavaScript -->
+              <div class="skill-card">
+                <i class="devicon-javascript-plain colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">JavaScript</span>
+                  <span class="block text-[11px] text-slate-400">ES6+ &amp; DOM</span>
+                </div>
+              </div>
+
+              <!-- TypeScript -->
+              <div class="skill-card">
+                <i class="devicon-typescript-plain colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">TypeScript</span>
+                  <span class="block text-[11px] text-slate-400">Typed JavaScript</span>
+                </div>
+              </div>
+
+              <!-- Java -->
+              <div class="skill-card">
+                <i class="devicon-java-plain colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">Java</span>
+                  <span class="block text-[11px] text-slate-400">OOP &amp; Core</span>
+                </div>
+              </div>
+
+              <!-- Python -->
+              <div class="skill-card">
+                <i class="devicon-python-plain colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">Python</span>
+                  <span class="block text-[11px] text-slate-400">Scripting &amp; Data</span>
+                </div>
+              </div>
+
+              <!-- SQL -->
+              <div class="skill-card">
+                <i class="fa-solid fa-database text-amber-400"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">SQL</span>
+                  <span class="block text-[11px] text-slate-400">Relational Queries</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Frameworks & Libraries -->
+          <div class="reveal reveal-delay-2">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-8 h-8 rounded-lg bg-sky-600/20 flex items-center justify-center text-sky-400 text-sm">
+                <i class="fa-solid fa-cubes"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Frameworks &amp; Libraries</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl">
+              <!-- React -->
+              <div class="skill-card">
+                <i class="devicon-react-original colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">React</span>
+                  <span class="block text-[11px] text-slate-400">Hooks, State &amp; Components</span>
+                </div>
+              </div>
+
+              <!-- Node.js -->
+              <div class="skill-card">
+                <i class="devicon-nodejs-plain colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">Node.js</span>
+                  <span class="block text-[11px] text-slate-400">Runtime &amp; APIs</span>
+                </div>
+              </div>
+
+              <!-- Tailwind CSS -->
+              <div class="skill-card">
+                <i class="devicon-tailwindcss-original colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">Tailwind CSS</span>
+                  <span class="block text-[11px] text-slate-400">Utility-First Styling</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Databases -->
+          <div class="reveal reveal-delay-3">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-8 h-8 rounded-lg bg-emerald-600/20 flex items-center justify-center text-emerald-400 text-sm">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Databases</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+              <!-- MySQL -->
+              <div class="skill-card">
+                <i class="devicon-mysql-original colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">MySQL</span>
+                  <span class="block text-[11px] text-slate-400">Relational Database Management</span>
+                </div>
+              </div>
+
+              <!-- SQL -->
+              <div class="skill-card">
+                <i class="fa-solid fa-table-cells text-sky-400"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">SQL Database Design</span>
+                  <span class="block text-[11px] text-slate-400">Schemas, Keys &amp; Indexing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Development Tools & Platforms -->
+          <div class="reveal reveal-delay-4">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-8 h-8 rounded-lg bg-purple-600/20 flex items-center justify-center text-purple-400 text-sm">
+                <i class="fa-solid fa-wrench"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">Development Tools &amp; Platforms</h3>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              <!-- VS Code -->
+              <div class="skill-card">
+                <i class="devicon-vscode-plain colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">Visual Studio Code</span>
+                  <span class="block text-[11px] text-slate-400">Primary Code Editor</span>
+                </div>
+              </div>
+
+              <!-- Git -->
+              <div class="skill-card">
+                <i class="devicon-git-plain colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">Git</span>
+                  <span class="block text-[11px] text-slate-400">Version Control</span>
+                </div>
+              </div>
+
+              <!-- GitHub -->
+              <div class="skill-card">
+                <i class="devicon-github-original text-white"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">GitHub</span>
+                  <span class="block text-[11px] text-slate-400">Repositories &amp; Collaboration</span>
+                </div>
+              </div>
+
+              <!-- GitHub Desktop -->
+              <div class="skill-card">
+                <i class="fa-brands fa-github-alt text-purple-400"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">GitHub Desktop</span>
+                  <span class="block text-[11px] text-slate-400">GUI Git Workflows</span>
+                </div>
+              </div>
+
+              <!-- Vercel -->
+              <div class="skill-card">
+                <i class="devicon-vercel-original text-white"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">Vercel</span>
+                  <span class="block text-[11px] text-slate-400">Cloud Deployment &amp; CI/CD</span>
+                </div>
+              </div>
+
+              <!-- NetBeans -->
+              <div class="skill-card">
+                <i class="devicon-apache-plain colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">NetBeans</span>
+                  <span class="block text-[11px] text-slate-400">Java IDE &amp; Debugging</span>
+                </div>
+              </div>
+
+              <!-- Figma -->
+              <div class="skill-card">
+                <i class="devicon-figma-plain colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">Figma</span>
+                  <span class="block text-[11px] text-slate-400">UI/UX Wireframing</span>
+                </div>
+              </div>
+
+              <!-- Canva -->
+              <div class="skill-card">
+                <i class="devicon-canva-original colored"></i>
+                <div>
+                  <span class="block font-semibold text-sm text-slate-100">Canva</span>
+                  <span class="block text-[11px] text-slate-400">Graphic Assets &amp; Layouts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. WHAT I DO SECTION
+         ======================================================================== -->
+    <section id="services" class="py-20 bg-navy-900/40 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-laptop-code"></i>
+            <span>Disciplines &amp; Focus</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">What I Do</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto rounded-full mt-3 mb-4"></div>
+          <p class="text-slate-400 text-base sm:text-lg">
+            Core areas of development, interface craftsmanship, and technical domains I am actively building upon.
+          </p>
+        </div>
+
+        <!-- 5 Development Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Card 1: Web Development -->
+          <div class="portfolio-card p-8 flex flex-col justify-between group reveal reveal-delay-1">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600/20 to-sky-500/20 border border-sky-500/30 flex items-center justify-center text-sky-400 text-2xl mb-6 group-hover:scale-110 group-hover:border-sky-400 transition-all">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">Web Development</h3>
+              <p class="text-slate-300 leading-relaxed text-sm">
+                Building responsive and interactive web applications designed for maximum performance, clean semantics, and cross-browser reliability.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-800 flex items-center gap-2 text-xs font-mono text-sky-400">
+              <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+              <span>Responsive &bull; Interactive &bull; Scalable</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Frontend Development -->
+          <div class="portfolio-card p-8 flex flex-col justify-between group reveal reveal-delay-2">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-600/20 to-blue-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl mb-6 group-hover:scale-110 group-hover:border-cyan-400 transition-all">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">Frontend Development</h3>
+              <p class="text-slate-300 leading-relaxed text-sm">
+                Creating clean, user-friendly interfaces and engaging web experiences with modern CSS, reactive layouts, and smooth animations.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-800 flex items-center gap-2 text-xs font-mono text-cyan-400">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span>HTML5 &bull; CSS3/Tailwind &bull; JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Backend Development -->
+          <div class="portfolio-card p-8 flex flex-col justify-between group reveal reveal-delay-3">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-600/20 to-blue-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-2xl mb-6 group-hover:scale-110 group-hover:border-indigo-400 transition-all">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">Backend Development</h3>
+              <p class="text-slate-300 leading-relaxed text-sm">
+                Working with server-side technologies, application logic, and databases to power structured APIs and reliable data persistence.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-800 flex items-center gap-2 text-xs font-mono text-indigo-400">
+              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+              <span>Node.js &bull; MySQL &bull; CRUD APIs</span>
+            </div>
+          </div>
+
+          <!-- Card 4: UI/UX Design -->
+          <div class="portfolio-card p-8 flex flex-col justify-between group reveal reveal-delay-4">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-600/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 group-hover:border-purple-400 transition-all">
+                <i class="fa-solid fa-pen-ruler"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">UI/UX Design</h3>
+              <p class="text-slate-300 leading-relaxed text-sm">
+                Exploring interface design and improving user experience through user journey mapping, aesthetic component hierarchy, and Figma wireframes.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-800 flex items-center gap-2 text-xs font-mono text-purple-400">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+              <span>Figma &bull; Prototyping &bull; Accessibility</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Continuous Learning (Col-span 2 on lg screens to center) -->
+          <div class="portfolio-card p-8 flex flex-col justify-between group lg:col-span-2 reveal reveal-delay-5">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-600/20 to-teal-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl mb-6 group-hover:scale-110 group-hover:border-emerald-400 transition-all">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">Continuous Learning</h3>
+              <p class="text-slate-300 leading-relaxed text-sm">
+                Expanding my knowledge in cybersecurity, data science, and artificial intelligence. Actively taking professional courses and participating in collegiate tech exploration at St. Mary's University.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-800 flex flex-wrap items-center gap-3 text-xs font-mono text-emerald-400">
+              <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20">Cybersecurity Foundations</span>
+              <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20">Data Science Explorations</span>
+              <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20">AI &amp; Automation</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. PROJECTS SECTION
+         ======================================================================== -->
+    <section id="projects" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>Featured Portfolio Works</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Featured Projects</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto rounded-full mt-3 mb-4"></div>
+          <p class="text-slate-400 text-base sm:text-lg">
+            Practical web applications developed with modern technologies, interactive features, and live cloud deployments on Vercel.
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          
+          <!-- Project 1: Dynamic Task Manager (CRUD) -->
+          <article class="portfolio-card overflow-hidden group flex flex-col reveal reveal-delay-1">
+            <!-- Project Preview Mockup -->
+            <div class="relative overflow-hidden bg-navy-900 border-b border-slate-800 aspect-[16/10]">
+              <img src="assets/images/project-taskmanager.svg" alt="Dynamic Task Manager Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <!-- Overlay Status Badge -->
+              <div class="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 rounded-full bg-navy-950/90 border border-emerald-500/50 backdrop-blur-md text-emerald-400 text-xs font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Completed</span>
+              </div>
+            </div>
+
+            <!-- Project Details -->
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-4 mb-2">
+                  <h3 class="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                    Dynamic Task Manager (CRUD)
+                  </h3>
+                </div>
+
+                <p class="text-slate-300 leading-relaxed text-sm mb-6">
+                  A task management web application that allows users to create, view, update, and delete tasks through an interactive interface. Features clean data handling, responsive layout cards, and seamless state persistence.
+                </p>
+
+                <!-- Technology Badges -->
+                <div class="flex flex-wrap gap-2 mb-8">
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-navy-800 text-sky-300 border border-sky-500/20">JavaScript</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-navy-800 text-slate-300 border border-slate-700">CRUD Architecture</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-navy-800 text-orange-400 border border-orange-500/20">HTML5</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-navy-800 text-blue-400 border border-blue-500/20">CSS3</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-navy-800 text-emerald-400 border border-emerald-500/20">Vercel Deployed</span>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                <a href="https://task-manager-kvj3idtoa-metsni.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-demo" aria-label="Open Dynamic Task Manager Live Demo in new tab">
+                  <span>Live Demo</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+                <span class="text-xs text-slate-400 font-mono">Status: Production</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Real-Time Weather App -->
+          <article class="portfolio-card overflow-hidden group flex flex-col reveal reveal-delay-2">
+            <!-- Project Preview Mockup -->
+            <div class="relative overflow-hidden bg-navy-900 border-b border-slate-800 aspect-[16/10]">
+              <img src="assets/images/project-weather.svg" alt="Real-Time Weather App Preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+              <!-- Overlay Status Badge -->
+              <div class="absolute top-4 right-4 flex items-center gap-2 px-3 py-1 rounded-full bg-navy-950/90 border border-emerald-500/50 backdrop-blur-md text-emerald-400 text-xs font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Completed</span>
+              </div>
+            </div>
+
+            <!-- Project Details -->
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-4 mb-2">
+                  <h3 class="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                    Real-Time Weather App
+                  </h3>
+                </div>
+
+                <p class="text-slate-300 leading-relaxed text-sm mb-6">
+                  A responsive weather application that allows users to search for cities and view current weather information through a clean and user-friendly interface. Integrates real-time meteorological telemetry and dynamic visual indicators.
+                </p>
+
+                <!-- Technology Badges -->
+                <div class="flex flex-wrap gap-2 mb-8">
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-navy-800 text-sky-300 border border-sky-500/20">JavaScript</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-navy-800 text-slate-300 border border-slate-700">Weather API</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-navy-800 text-cyan-400 border border-cyan-500/20">Telemetry UI</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-navy-800 text-blue-400 border border-blue-500/20">CSS3</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-navy-800 text-emerald-400 border border-emerald-500/20">Vercel Deployed</span>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                <a href="https://weather-telemetry-n6zmni2kj-metsni.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-demo" aria-label="Open Real-Time Weather App Live Demo in new tab">
+                  <span>Live Demo</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+                <span class="text-xs text-slate-400 font-mono">Status: Production</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. CERTIFICATIONS SECTION
+         ======================================================================== -->
+    <section id="certifications" class="py-20 bg-navy-900/40 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-award"></i>
+            <span>Verified Credentials</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Certifications</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto rounded-full mt-3 mb-4"></div>
+          <p class="text-slate-400 text-base sm:text-lg">
+            Professional certifications demonstrating competency in data science, cybersecurity, and UI/UX design.
+          </p>
+        </div>
+
+        <!-- 3 Certificate Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Certificate 1: Introduction to Data Science -->
+          <div class="portfolio-card p-6 flex flex-col justify-between group reveal reveal-delay-1">
+            <div>
+              <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-blue-900/30 border border-blue-500/30 p-2 flex items-center justify-center">
+                  <img src="assets/icons/coursera.svg" alt="Coursera Logo" class="w-full h-full" width="48" height="48">
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+                  <i class="fa-solid fa-check text-[10px]"></i> Completed
+                </span>
+              </div>
+
+              <span class="text-xs font-semibold uppercase tracking-wider text-sky-400 block mb-1">Coursera</span>
+              <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-3">
+                Introduction to Data Science
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Foundational understanding of data analysis, data manipulation pipelines, statistical insights, and data visualization.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800">
+              <a href="https://coursera.org/share/5a676d982401390125afe137a72d3c33" target="_blank" rel="noopener noreferrer" class="w-full btn-outline text-xs justify-center" aria-label="View Introduction to Data Science Certificate on Coursera">
+                <span>View Certificate</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Certificate 2: Foundations of Cybersecurity -->
+          <div class="portfolio-card p-6 flex flex-col justify-between group reveal reveal-delay-2">
+            <div>
+              <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-blue-900/30 border border-blue-500/30 p-2 flex items-center justify-center">
+                  <img src="assets/icons/coursera.svg" alt="Coursera Logo" class="w-full h-full" width="48" height="48">
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+                  <i class="fa-solid fa-check text-[10px]"></i> Completed
+                </span>
+              </div>
+
+              <span class="text-xs font-semibold uppercase tracking-wider text-sky-400 block mb-1">Coursera</span>
+              <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-3">
+                Foundations of Cybersecurity
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Core security architecture, threat models, risk mitigation, encryption fundamentals, and secure coding practices.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800">
+              <a href="https://coursera.org/share/b1c4483a602b4ee40bca5eb41df3589a" target="_blank" rel="noopener noreferrer" class="w-full btn-outline text-xs justify-center" aria-label="View Foundations of Cybersecurity Certificate on Coursera">
+                <span>View Certificate</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Certificate 3: UI/UX Design -->
+          <div class="portfolio-card p-6 flex flex-col justify-between group reveal reveal-delay-3">
+            <div>
+              <div class="flex items-start justify-between mb-4">
+                <div class="w-12 h-12 rounded-xl bg-purple-900/30 border border-purple-500/30 p-2 flex items-center justify-center">
+                  <img src="assets/icons/cursa.svg" alt="Cursa Logo" class="w-full h-full" width="48" height="48">
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+                  <i class="fa-solid fa-check text-[10px]"></i> Completed
+                </span>
+              </div>
+
+              <span class="text-xs font-semibold uppercase tracking-wider text-purple-400 block mb-1">Cursa</span>
+              <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-3">
+                UI/UX Design
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Design principles, wireframing, typography, color theory, accessibility guidelines, and user-centric web interface workflows.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800">
+              <a href="https://cursa.app/en/my-certificate/certad0201d11ac4d8ce7d9614deead4143d" target="_blank" rel="noopener noreferrer" class="w-full btn-outline text-xs justify-center" aria-label="View UI/UX Design Certificate on Cursa">
+                <span>View Certificate</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. CONTACT SECTION
+         ======================================================================== -->
+    <section id="contact" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i class="fa-regular fa-paper-plane"></i>
+            <span>Get In Touch</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Contact Me</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto rounded-full mt-3 mb-4"></div>
+          <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto">
+            Interested in working together or discussing an opportunity? Feel free to get in touch!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Contact Channels & Info Cards -->
+          <div class="lg:col-span-5 space-y-5 reveal reveal-delay-1">
+            
+            <div class="portfolio-card p-6">
+              <h3 class="text-xl font-bold text-white mb-2">Let's Connect &amp; Collaborate</h3>
+              <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                Whether you have an internship opportunity, a project to collaborate on, or just want to chat about tech, feel free to reach out via email or LinkedIn.
+              </p>
+
+              <!-- Channels List -->
+              <div class="space-y-4">
+                
+                <!-- Email Link -->
+                <div class="flex items-center justify-between p-3.5 rounded-xl bg-navy-800/80 border border-slate-700/60 hover:border-sky-500/40 transition-colors">
+                  <div class="flex items-center gap-3.5 overflow-hidden">
+                    <div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400 flex-shrink-0">
+                      <i class="fa-solid fa-envelope text-lg"></i>
+                    </div>
+                    <div class="truncate">
+                      <span class="block text-xs font-medium text-slate-400">Email</span>
+                      <a href="mailto:metsnib@gmail.com" class="text-sm font-semibold text-white hover:text-cyan-400 transition-colors truncate block">
+                        metsnib@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  <button type="button" class="copy-email-btn p-2 text-slate-400 hover:text-cyan-400 focus:outline-none" title="Copy email address" aria-label="Copy email address">
+                    <i class="fa-regular fa-copy"></i>
+                  </button>
+                </div>
+
+                <!-- LinkedIn Link -->
+                <a href="https://linkedin.com/in/metsnib" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl bg-navy-800/80 border border-slate-700/60 hover:border-blue-500/40 transition-colors group">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 flex-shrink-0">
+                      <i class="fa-brands fa-linkedin text-xl"></i>
+                    </div>
+                    <div>
+                      <span class="block text-xs font-medium text-slate-400">LinkedIn</span>
+                      <span class="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                        linkedin.com/in/metsnib
+                      </span>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-cyan-400 mr-2 transition-colors"></i>
+                </a>
+
+                <!-- GitHub Link -->
+                <a href="https://github.com/metsnib" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl bg-navy-800/80 border border-slate-700/60 hover:border-slate-500 transition-colors group">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-lg bg-slate-700/30 flex items-center justify-center text-slate-300 flex-shrink-0">
+                      <i class="fa-brands fa-github text-xl"></i>
+                    </div>
+                    <div>
+                      <span class="block text-xs font-medium text-slate-400">GitHub</span>
+                      <span class="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                        github.com/metsnib
+                      </span>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-cyan-400 mr-2 transition-colors"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+            <!-- St. Mary's Info Box -->
+            <div class="p-5 rounded-xl bg-gradient-to-r from-blue-900/30 to-sky-900/20 border border-blue-500/30 flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-lg flex-shrink-0">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <div>
+                <span class="block text-xs font-semibold uppercase tracking-wider text-sky-300">Current University</span>
+                <span class="text-sm font-bold text-white">St. Mary's University &bull; Computer Science</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Interactive Message Form -->
+          <div class="lg:col-span-7 reveal reveal-delay-2">
+            <div class="portfolio-card p-6 sm:p-8">
+              <h3 class="text-xl font-bold text-white mb-2">Send a Direct Message</h3>
+              <p class="text-slate-400 text-sm mb-6">
+                Fill out the form below to quickly dispatch an email directly to <strong class="text-slate-200">metsnib@gmail.com</strong>.
+              </p>
+
+              <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Name Input -->
+                  <div>
+                    <label for="form-name" class="block text-xs font-medium text-slate-300 mb-1.5">Your Name <span class="text-rose-400">*</span></label>
+                    <input type="text" id="form-name" required placeholder="e.g. Berhanu Wakuma" class="w-full px-4 py-2.5 rounded-lg bg-navy-800/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition-colors">
+                  </div>
+
+                  <!-- Email Input -->
+                  <div>
+                    <label for="form-email" class="block text-xs font-medium text-slate-300 mb-1.5">Your Email <span class="text-rose-400">*</span></label>
+                    <input type="email" id="form-email" required placeholder="berhanu@example.com" class="w-full px-4 py-2.5 rounded-lg bg-navy-800/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition-colors">
+                  </div>
+                </div>
+
+                <!-- Subject Input -->
+                <div>
+                  <label for="form-subject" class="block text-xs font-medium text-slate-300 mb-1.5">Subject</label>
+                  <input type="text" id="form-subject" placeholder="Internship Opportunity / Project Collaboration" class="w-full px-4 py-2.5 rounded-lg bg-navy-800/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition-colors">
+                </div>
+
+                <!-- Message Input -->
+                <div>
+                  <label for="form-message" class="block text-xs font-medium text-slate-300 mb-1.5">Message <span class="text-rose-400">*</span></label>
+                  <textarea id="form-message" rows="4" required placeholder="Hi Metsnanat, I came across your portfolio..." class="w-full px-4 py-2.5 rounded-lg bg-navy-800/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition-colors resize-y"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-primary w-full sm:w-auto">
+                  <i class="fa-solid fa-paper-plane text-xs"></i>
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="border-t border-slate-800 bg-navy-950/90 py-12 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Brand & Details -->
+        <div class="text-center md:text-left">
+          <a href="#hero" class="text-lg font-bold text-white hover:text-cyan-400 transition-colors">
+            Metsnanat Berhanu
+          </a>
+          <p class="text-xs text-slate-400 mt-1">
+            3rd-Year Computer Science Student &bull; St. Mary's University
+          </p>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400">
+          <a href="#about" class="hover:text-white transition-colors">About</a>
+          <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+          <a href="#services" class="hover:text-white transition-colors">What I Do</a>
+          <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+          <a href="#certifications" class="hover:text-white transition-colors">Certifications</a>
+          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex items-center gap-4 text-slate-400">
+          <a href="https://linkedin.com/in/metsnib" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin text-lg"></i>
+          </a>
+          <a href="https://github.com/metsnib" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors" aria-label="GitHub">
+            <i class="fa-brands fa-github text-lg"></i>
+          </a>
+          <a href="mailto:metsnib@gmail.com" class="hover:text-cyan-400 transition-colors" aria-label="Email">
+            <i class="fa-solid fa-envelope text-lg"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-slate-850/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 text-center">
+        <p>&copy; 2026 Metsnanat Berhanu. All rights reserved.</p>
+        <p>Designed with passion, love &amp; Dedication.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING BACK TO TOP BUTTON
+       ======================================================================== -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-xl bg-navy-800/90 text-cyan-400 border border-cyan-500/30 shadow-lg shadow-black/40 flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-sky-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400" aria-label="Scroll back to top" title="Back to top">
+    <i class="fa-solid fa-chevron-up text-sm"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
