@@ -16,7 +16,7 @@ A personal portfolio website showcasing my background, technical skills, project
 
 A task management application designed to help users organize, manage, and keep track of their tasks.
 
-🔗 Live Demo: [View Task Manager](https://weather-telemetry-n6zmni2kj-metsni.vercel.app)
+🔗 Live Demo: [View Task Manager](https://task-manager-kvj3idtoa-metsni.vercel.app)
 
 ---
 
