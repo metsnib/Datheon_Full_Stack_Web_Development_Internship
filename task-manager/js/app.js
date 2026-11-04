@@ -1,5 +1,5 @@
 /**
- * Zenith Task Manager & Productivity Tracker
+ * Metsni Task Manager & Productivity Tracker
  * Pure Vanilla JavaScript (ES6+) with Zero External Dependencies
  * Full CRUD, Instant localStorage Persistence, Interactive UI
  */
@@ -12,9 +12,9 @@
      ========================================================================== */
   const STORAGE_KEYS = {
     TASKS: 'zenith_tasks_data_v1',
-    CATEGORIES: 'zenith_categories_data_v1',
-    THEME: 'zenith_theme_v1',
-    SOUND: 'zenith_sound_v1'
+    CATEGORIES: 'Metsni_categories_data_v1',
+    THEME: 'Metsni_theme_v1',
+    SOUND: 'Metsni_sound_v1'
   };
 
   const DEFAULT_CATEGORIES = [
