@@ -24,7 +24,7 @@ A task management application designed to help users organize, manage, and keep 
 
 A weather application that provides weather information through a simple and user-friendly interface.
 
-🔗 Live Demo: [View Weather App](https://weather-telemetry-n6zmni2kj-metsnib.vercel.app)
+🔗 Live Demo: [View Weather App](https://weather-telemetry-n6zmni2kj-metsni.vercel.app)
 
 ---
 
